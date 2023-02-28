@@ -19,7 +19,6 @@ public class TradestoreApplicationTests {
 	@Autowired
 	private MockMvc mockMvc;
 
-	/*
 	@Test
 	public void getsAllTrades() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/trade")
@@ -35,7 +34,7 @@ public class TradestoreApplicationTests {
 				.andExpect(status().isOk())
 				.andReturn();
 	}
-	*/
+
 	@Test
 	public void returnsNotFoundForInvalidSingleTrade() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/latest/4")
@@ -43,7 +42,6 @@ public class TradestoreApplicationTests {
 				.andExpect(status().isNotFound())
 				.andReturn();
 	}
-	/*
 
 	@Test
 	public void addsNewRide() throws Exception {
@@ -55,5 +53,4 @@ public class TradestoreApplicationTests {
 				.andExpect(status().isOk())
 				.andReturn();
 	}
-	 */
 }
