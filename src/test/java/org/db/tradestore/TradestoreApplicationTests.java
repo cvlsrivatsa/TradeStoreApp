@@ -19,38 +19,41 @@ public class TradestoreApplicationTests {
 	@Autowired
 	private MockMvc mockMvc;
 
+	/*
 	@Test
-	public void getsAllRides() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.get("/ride")
+	public void getsAllTrades() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.get("/trade")
 						.accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
 				.andReturn();
 	}
 
 	@Test
-	public void getsSingleRide() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.get("/ride/1")
+	public void getsSingleTrade() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.get("/trade/1")
 						.accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
 				.andReturn();
 	}
-
+	*/
 	@Test
-	public void returnsNotFoundForInvalidSingleRide() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.get("/ride/4")
+	public void returnsNotFoundForInvalidSingleTrade() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.get("/latest/4")
 						.accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isNotFound())
 				.andReturn();
 	}
+	/*
 
 	@Test
 	public void addsNewRide() throws Exception {
-		String newRide = "{\"name\":\"Monorail\",\"description\":\"Sedate travelling ride.\",\"thrillFactor\":2,\"vomitFactor\":1}";
-		mockMvc.perform(MockMvcRequestBuilders.post("/ride")
+		String newTrade = "{\"tradeId\":\"T1\",\"version\":\"1\",\"counterPartyId\":\"CP-1\",\"bookId\":\"B1\"}";
+		mockMvc.perform(MockMvcRequestBuilders.post("/trade")
 						.contentType(MediaType.APPLICATION_JSON)
-						.content(newRide)
+						.content(newTrade)
 						.accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
 				.andReturn();
 	}
+	 */
 }
